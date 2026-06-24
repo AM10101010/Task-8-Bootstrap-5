@@ -3,20 +3,140 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Products</title>
+	<title>Bean & Brew | Products</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+	<style>
+		:root {
+			--coffee-900: #2e2622;
+			--coffee-700: #6a5750;
+			--coffee-200: #e8ddd3;
+			--surface: #fcfaf7;
+			--accent: #8f6a53;
+		}
+
+		body {
+			font-family: "Manrope", sans-serif;
+			background: var(--surface);
+			color: var(--coffee-900);
+			min-height: 100vh;
+		}
+
+		a {
+			color: inherit;
+		}
+
+		.navbar {
+			background: transparent;
+		}
+
+		.brand {
+			font-size: 1.05rem;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: var(--coffee-900);
+			text-decoration: none;
+		}
+
+		.nav-link {
+			color: var(--coffee-700);
+			font-weight: 500;
+		}
+
+		.nav-link.active,
+		.nav-link:hover {
+			color: var(--accent);
+		}
+
+		.page-card,
+		.product-card {
+			background: #fff;
+			border: 1px solid var(--coffee-200);
+			border-radius: 1rem;
+		}
+
+		.page-card {
+			padding: 3rem 2rem;
+		}
+
+		.product-card {
+			padding: 1.5rem;
+			height: 100%;
+		}
+
+		.eyebrow {
+			text-transform: uppercase;
+			letter-spacing: 0.12em;
+			font-size: 0.8rem;
+			color: var(--accent);
+		}
+
+		.price {
+			color: var(--accent);
+			font-weight: 700;
+		}
+	</style>
 </head>
 <body>
 	<header>
-		<nav>
-			<a href="Index.html">Home</a>
-			<a href="About.html">About</a>
-			<a href="Products.html">Products</a>
+		<nav class="navbar navbar-expand-lg border-bottom border-dark border-opacity-10">
+			<div class="container py-2">
+				<a class="brand" href="Index.html">Bean & Brew</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<div class="navbar-nav ms-auto gap-lg-3">
+						<a class="nav-link" href="Index.html">Home</a>
+						<a class="nav-link" href="About.html">About</a>
+						<a class="nav-link active" aria-current="page" href="Products.html">Products</a>
+					</div>
+				</div>
+			</div>
 		</nav>
 	</header>
 
-	<main>
-		<h1>Products</h1>
-		<p>This is the products page.</p>
+	<main class="container py-5">
+		<section class="page-card mb-5 text-center text-lg-start">
+			<p class="eyebrow mb-3">Simple menu</p>
+			<h1 class="display-5 mb-3 fw-semibold">Coffee, milk, and a few good choices.</h1>
+			<p class="lead text-secondary mb-0">A small product page with a clean presentation and just enough detail to feel like a calm café menu.</p>
+		</section>
+
+		<section class="row g-4">
+			<div class="col-md-4">
+				<div class="product-card">
+					<div class="d-flex justify-content-between align-items-start mb-3">
+						<h2 class="h5 mb-0">Espresso</h2>
+						<span class="price">$3</span>
+					</div>
+					<p class="text-secondary mb-0">Rich, smooth, and balanced with a warm finish.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-card">
+					<div class="d-flex justify-content-between align-items-start mb-3">
+						<h2 class="h5 mb-0">Latte</h2>
+						<span class="price">$5</span>
+					</div>
+					<p class="text-secondary mb-0">Velvety milk and espresso with soft caramel notes.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-card">
+					<div class="d-flex justify-content-between align-items-start mb-3">
+						<h2 class="h5 mb-0">Croissant</h2>
+						<span class="price">$4</span>
+					</div>
+					<p class="text-secondary mb-0">Buttery, flaky, and made to pair with your morning cup.</p>
+				</div>
+			</div>
+		</section>
 	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
