@@ -4,64 +4,135 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bean & Brew | About</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f4f1ea;
+			color: #222222;
+		}
+
+		header {
+			padding: 24px;
+			background-color: #ffffff;
+			border-bottom: 1px solid #d7d2c8;
+		}
+
+		header h1 {
+			margin: 0;
+			font-size: 28px;
+		}
+
+		nav {
+			margin-top: 12px;
+		}
+
+		nav a {
+			margin-right: 16px;
+			color: #222222;
+			text-decoration: none;
+		}
+
+		nav a:hover {
+			text-decoration: underline;
+		}
+
+		main {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 24px;
+		}
+
+		.section-block {
+			background-color: #ffffff;
+			border: 1px solid #d7d2c8;
+			padding: 20px;
+			margin-bottom: 24px;
+		}
+
+		.section-block h2 {
+			margin-top: 0;
+			font-size: 24px;
+		}
+
+		.section-block p {
+			line-height: 1.5;
+		}
+
+		.about-image,
+		.contact-card img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			border: 1px solid #d7d2c8;
+		}
+
+		.about-image {
+			margin-top: 16px;
+			max-width: 360px;
+		}
+
+		.contact-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			gap: 16px;
+			margin-top: 16px;
+		}
+
+		.contact-card {
+			border: 1px solid #d7d2c8;
+			padding: 16px;
+			background-color: #faf8f3;
+		}
+
+		.contact-card h3 {
+			margin: 12px 0 8px;
+			font-size: 20px;
+		}
+
+		.contact-card p {
+			margin: 6px 0;
+		}
+	</style>
 </head>
-<body class="bg-body-tertiary text-dark">
+
+<body>
 	<header>
-		<nav class="navbar navbar-expand-lg bg-white border-bottom">
-			<div class="container py-2">
-				<a class="navbar-brand text-uppercase fw-bold" href="Index.html">Bean & Brew</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="mainNav">
-					<div class="navbar-nav ms-auto">
-						<a class="nav-link" href="Index.html">Home</a>
-						<a class="nav-link active" aria-current="page" href="About.html">About</a>
-						<a class="nav-link" href="Products.html">Products</a>
-					</div>
-				</div>
-			</div>
+		<h1>Bean & Brew</h1>
+		<nav>
+			<a href="Index.html">Home</a>
+			<a href="About.html">About</a>
+			<a href="Products.html">Products</a>
 		</nav>
 	</header>
 
-	<main class="container py-5">
-		<section class="card border-0 shadow-sm mb-5 text-center text-lg-start">
-			<div class="card-body p-4 p-lg-5">
-			<p class="text-uppercase text-secondary small fw-semibold mb-3">Our story</p>
-			<h1 class="display-5 mb-3 fw-semibold">A quiet place built around good coffee.</h1>
-			<p class="lead text-secondary mb-0">Bean & Brew is imagined as a small minimalist shop where the menu stays simple, the space stays calm, and every cup feels intentional.</p>
-			</div>
+	<main>
+		<section class="section-block">
+			<h2>About us</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bean &amp; Brew is a simple prototype company that focuses on coffee service, friendly support, and clear information for customers.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, erat sed feugiat feugiat, nibh tortor volutpat nisl, sed tristique est nibh at velit.</p>
+			<img class="about-image" src="https://picsum.photos/360/220?random=31" alt="Placeholder image for about us section">
 		</section>
 
-		<section class="row g-4">
-			<div class="col-md-4">
-				<div class="card h-100 shadow-sm border-0">
-					<div class="card-body p-4">
-						<h2 class="h5 mb-3">Craft</h2>
-						<p class="text-secondary mb-0">We focus on a short menu and careful brewing instead of complexity.</p>
-					</div>
+		<section class="section-block">
+			<h2>Contact</h2>
+			<div class="contact-grid">
+				<div class="contact-card">
+					<img src="https://picsum.photos/220/180?random=32" alt="Placeholder portrait for CEO">
+					<h3>Alex Johnson</h3>
+					<p>CEO</p>
+					<p>Phone: 070-123 45 67</p>
+					<p>Email: alex.johnson@example.com</p>
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card h-100 shadow-sm border-0">
-					<div class="card-body p-4">
-						<h2 class="h5 mb-3">Mood</h2>
-						<p class="text-secondary mb-0">Soft light, warm textures, and clean layout create a relaxed atmosphere.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card h-100 shadow-sm border-0">
-					<div class="card-body p-4">
-						<h2 class="h5 mb-3">Taste</h2>
-						<p class="text-secondary mb-0">Balanced espresso, smooth milk drinks, and simple seasonal pairings.</p>
-					</div>
+				<div class="contact-card">
+					<img src="https://picsum.photos/220/180?random=33" alt="Placeholder portrait for HR Manager">
+					<h3>Sara Nilsson</h3>
+					<p>HR Manager</p>
+					<p>Phone: 070-987 65 43</p>
+					<p>Email: sara.nilsson@example.com</p>
 				</div>
 			</div>
 		</section>
 	</main>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
