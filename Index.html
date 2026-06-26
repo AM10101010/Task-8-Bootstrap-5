@@ -30,12 +30,25 @@
 		}
 
 		nav a {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 44px;
+			padding: 8px 12px;
+			border-radius: 6px;
 			color: #222222;
 			text-decoration: none;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0.08);
 		}
 
 		nav a:hover {
 			text-decoration: underline;
+		}
+
+		nav a[aria-current="page"] {
+			background-color: #ebe5d7;
+			text-decoration: underline;
+			font-weight: 600;
 		}
 
 		header h1 {
@@ -98,10 +111,21 @@
 		@media (max-width: 480px) {
 			nav {
 				gap: 8px;
+				margin-top: 10px;
 			}
 
 			nav a {
-				padding: 4px 0;
+				padding: 8px 10px;
+				min-height: 44px;
+			}
+
+			main {
+				padding: 12px;
+			}
+
+			.section-block {
+				padding: 14px;
+				margin-bottom: 12px;
 			}
 
 			.section-block h2 {
@@ -115,7 +139,7 @@
 	<header>
 		<h1>Kaffeparty</h1>
 		<nav>
-			<a href="Index.html">Hem</a>
+			<a href="Index.html" aria-current="page">Hem</a>
 			<a href="About.html">Om Oss</a>
 			<a href="Products.html">Produkter</a>
 		</nav>
