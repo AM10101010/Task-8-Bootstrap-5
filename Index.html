@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kaffeparty | Hem</title>
 	<style>
+		* {
+			box-sizing: border-box;
+		}
+
 		body {
 			margin: 0;
 			font-family: Arial, sans-serif;
@@ -19,11 +23,13 @@
 		}
 
 		nav {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px 16px;
 			margin-top: 12px;
 		}
 
 		nav a {
-			margin-right: 16px;
 			color: #222222;
 			text-decoration: none;
 		}
@@ -41,6 +47,7 @@
 			max-width: 900px;
 			margin: 0 auto;
 			padding: 24px;
+			width: 100%;
 		}
 
 		.section-block {
@@ -66,6 +73,40 @@
 			height: auto;
 			margin-top: 16px;
 			border: 1px solid #d7d2c8;
+		}
+
+		@media (max-width: 768px) {
+			header,
+			main {
+				padding: 16px;
+			}
+
+			header h1 {
+				font-size: 24px;
+			}
+
+			.section-block {
+				padding: 16px;
+				margin-bottom: 16px;
+			}
+
+			.section-block h2 {
+				font-size: 22px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			nav {
+				gap: 8px;
+			}
+
+			nav a {
+				padding: 4px 0;
+			}
+
+			.section-block h2 {
+				font-size: 20px;
+			}
 		}
 	</style>
 </head>
